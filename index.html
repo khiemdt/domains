@@ -19,6 +19,7 @@
         window.onload = function () {
             // Get domain from the URL
             var domain = window.location.hostname;
+            domain = domain.replace('www.', '');
 
             // Replace all occurrences of '0xbull.org' in the HTML
             var bodyHtml = document.body.innerHTML;
