@@ -1,95 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Domains For sale!</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-            rel="stylesheet"
-        />
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js';
-            import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js';
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
 
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-                apiKey: 'AIzaSyDbns_A3ST0bBFm8M7c56U_PI76fraLgz0',
-                authDomain: 'resonant-craft-316302.firebaseapp.com',
-                projectId: 'resonant-craft-316302',
-                storageBucket: 'resonant-craft-316302.appspot.com',
-                messagingSenderId: '1087877640063',
-                appId: '1:1087877640063:web:4d44bdf39d034052a3f44a',
-                measurementId: 'G-SQNTZSZ6NK',
-            };
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domains For sale!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js';
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
 
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-            function countdown() {
-                const now = new Date();
-                const eventDate = new Date('Aug 31, 2023');
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        window.onload = function () {
+            // Get domain from the URL
+            var domain = window.location.hostname;
 
-                const currentTime = now.getTime();
-                const eventTime = eventDate.getTime();
+            // Replace all occurrences of '0xbull.org' in the HTML
+            var bodyHtml = document.body.innerHTML;
+            bodyHtml = bodyHtml.split('0xbull.org').join(domain);
+            document.body.innerHTML = bodyHtml;
+        };
+        const firebaseConfig = {
+            apiKey: 'AIzaSyDbns_A3ST0bBFm8M7c56U_PI76fraLgz0',
+            authDomain: 'resonant-craft-316302.firebaseapp.com',
+            projectId: 'resonant-craft-316302',
+            storageBucket: 'resonant-craft-316302.appspot.com',
+            messagingSenderId: '1087877640063',
+            appId: '1:1087877640063:web:4d44bdf39d034052a3f44a',
+            measurementId: 'G-SQNTZSZ6NK',
+        };
 
-                const remTime = eventTime - currentTime;
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        function countdown() {
+            const now = new Date();
+            const eventDate = new Date('Aug 31, 2023');
 
-                const days = Math.floor(remTime / (1000 * 60 * 60 * 24));
-                const hours = Math.floor(
-                    (remTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-                );
-                const minutes = Math.floor(
-                    (remTime % (1000 * 60 * 60)) / (1000 * 60)
-                );
-                const seconds = Math.floor((remTime % (1000 * 60)) / 1000);
+            const currentTime = now.getTime();
+            const eventTime = eventDate.getTime();
 
-                document.querySelector(
-                    'p'
-                ).innerHTML = `${days} day ${hours} hour ${minutes} m ${seconds} s`;
-            }
+            const remTime = eventTime - currentTime;
 
-            setInterval(countdown, 1000);
-        </script>
-    </head>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
+            const days = Math.floor(remTime / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(
+                (remTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            const minutes = Math.floor(
+                (remTime % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            const seconds = Math.floor((remTime % (1000 * 60)) / 1000);
+
+            document.querySelector(
+                'p'
+            ).innerHTML = `${days} day ${hours} hour ${minutes} m ${seconds} s`;
         }
-    </style>
-    <body>
-        <div style="margin: auto; max-width: 400px">
-            <img width="100%" src="/bull.png" alt="" />
-            <h1>Domains For sale!</h1>
-            <p style="border: 1px dashed; padding: 10px"></p>
-            <b style="font-size: 16px"
-                ><a href="https://0xbull.org" target="_blank">0xbull.org</a> |
-                <a href="https://0xbull.com" target="_blank">0xbull.com</a> |
-                <a href="https://allchains.xyz" target="_blank"
-                    >allchains.xyz</a
-                > </b
-            ><br />
+
+        setInterval(countdown, 1000);
+    </script>
+</head>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+</style>
+
+<body>
+    <div style="margin: auto; max-width: 400px">
+        <img width="100%" src="/bull.png" alt="" />
+        <h1>Domains For sale!</h1>
+        <p style="border: 1px dashed; padding: 10px"></p>
+        <b style="font-size: 16px"><a href="#" target="_blank">0xbull.org</a><br />
             <p>Price: $999 <i style="color: red">(45%)</i></p>
             <p style="font-size: 16px; text-align: justify">
-                Thank you for your interest in <br />
-                <a href="https://0xbull.org" target="_blank">0xbull.org</a> -
-                <a href="https://0xbull.com" target="_blank">0xbull.com</a> -
-                <a href="https://0xdaily.com" target="_blank">0xdaily.com</a>
-                domains! <br />
+                Thank you for your interest in <a href="#" target="_blank">0xbull.org</a> domain!
+                <br />
                 If you are thinking of buying a domain, we suggest that you
                 can't make a better choice to start your web story. Contact
-                <a href="mailto:doanthekhiem@gmail.com"
-                    >doanthekhiem@gmail.com</a
-                >
+                <a href="mailto:domainsale312@gmail.com">domainsale312@gmail.com</a>
                 quickly and request to buy. Hurry up and prepare your website
                 and we will also provide you with the best support service!<br />
                 Good luck!
             </p>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
